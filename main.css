@@ -1,0 +1,294 @@
+*, *::before, *::after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    font-family: segoewpbold,sans-serif,"segoe ui",arial;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.top-panel {
+    height: 16vh !important;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    border: 3px solid rebeccapurple;
+}
+
+.left-side {
+    width: 25vw;
+    float: left;
+}
+
+.index-logo {
+    width: 150px;
+     height: 106px;
+     display: inline-block;
+ }
+
+ .logo-information {
+     width: 55%;
+     display: inline-block;
+ }
+
+.right-side {
+    width: 65vw;
+    float: right;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn::after {
+    content: '\203A';  
+    font-size: 1.4rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.main-screen {
+    height: 81vh !important;
+}
+
+.head-block {
+    margin-top: 12em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.head-block p::before {
+    content: url(/image/Cocktail-512.png);
+}
+
+.head-block h1 {
+    font-size: 8.2rem;
+    letter-spacing: 0.065em;
+    margin: 0 0 1em;
+    border: 10px solid black;
+    padding: 0em 0.2em;
+    line-height: 0.9;
+    display: inline-block;
+}
+
+.bottom-block {
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    border: 1px solid rgba(0,0,0,0.09);
+    display: inline-block;
+    padding: 0.5em 1em;
+}
+
+.button {
+
+}
+
+.button:after {
+    content: ' \203A';  
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.19em;
+    text-align: right;
+    margin: 2.2rem 1rem;
+    display: block;
+    cursor: pointer;
+}
+
+h3::before {
+    content: url(/image/Cocktail-512.png);
+}
+
+.slider {
+    position: relative;
+    width: 72vw;
+    height: 70vh;
+    margin: 0 auto;
+    
+}
+
+.slider input[type=radio] {
+    position: absolute;
+    opacity: 0;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+    height: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.slider-controls label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 3px;
+    background: white;
+    border: 3px solid black;
+    vertical-align: top;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"],
+#btn-4:checked ~ .slider-controls label[for="btn-4"] {
+    background: #c1c1c1;
+}
+
+
+.slides {
+    position: relative;
+}
+
+.slide {
+    
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+    display: block;
+}
+
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+    display: block;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+    display: block;
+}
+
+#btn-4:checked ~ .slides .slide:nth-child(4) {
+    display: block;
+}
+
+.teacher-photo {
+    display: inline-block;
+    width: 30%;
+}
+
+.teacher-information {
+    display: inline-block;
+    width: 65%;
+    vertical-align: top;
+}
+
+.teacher-name {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    letter-spacing: 0.025em;
+    text-align: left;
+}
+
+.teacher-description {
+    font-size: 1rem;
+    line-height: 1.4em;
+    text-align: left;
+    text-transform: initial;
+    letter-spacing: initial;
+    color: #afafaf;
+}
+
+.footer {
+    height: 50vh !important;
+}
+
+.top {
+    padding: 0 4.5rem;
+    margin-top: 3rem;
+}
+
+footer .top p {
+    font-size: 1.1rem;
+    text-align: right;
+    color: #4d4d4d;
+    letter-spacing: 0.025em;
+}
+
+footer .middle {
+    padding: 2rem;
+}
+
+.logo-container {
+    display: inline-block;
+    width: 40%;
+}
+
+.social {
+    display: inline-block;
+    width: 40%;
+    text-align: right;
+}
+
+.social p, .copyright p {
+    font-size: 0.95rem;
+    color: #5d5d5d;
+    letter-spacing: 0.025em;
+    text-transform: initial;
+    
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,0,0.9);
+    padding: 1.5rem;
+}
