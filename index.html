@@ -13,7 +13,7 @@
     <header class="top-panel container clearfix">
         <div class="left-side">
             <div class="index-logo">
-                <img src="/image/DragonIcon_Blue_HEX.png" alt="DRAGON">
+                <img src="/image/Dragon's_Eye.png" alt="DRAGON">
             </div>
             <div class="logo-information">
                 <h2>DRAGON</h2>
@@ -21,40 +21,42 @@
                     <br> барменов</p>
             </div>
         </div>
-        <nav class="right-side">
-            <ul class="menu">
-                <li>
-                    <a href="#">Кто мы</a>
-                </li>
-                <li class="dropdown">
-                    <a class="dropbtn">О курсе</a>
-                    <ul class="dropdown-content">
-                        <li>
-                            <a href="#">преподаватели</a>
-                        </li>
-                        <li>
-                            <a href="#">календарь занятий</a>
-                        </li>
-                        <li>
-                            <a href="#">работы выпускников</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropbtn">Новый набор</a>
-                    <ul class="dropdown-content">
-                        <li>
-                            <a href="#">программа курса</a>
-                        </li>
-                        <li>
-                            <a href="#">оплата курса</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Контакты</a>
-                </li>
-            </ul>
+        <nav class="right-side mobile-dropdown">
+            <div class="mobile-dropbtn">
+                <ul class="menu mobile-dropdown-content">
+                    <li>
+                        <a href="#">Кто мы</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropbtn">О курсе</a>
+                        <ul class="dropdown-content">
+                            <li>
+                                <a href="#">преподаватели</a>
+                            </li>
+                            <li>
+                                <a href="#">календарь занятий</a>
+                            </li>
+                            <li>
+                                <a href="#">работы выпускников</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropbtn">Новый набор</a>
+                        <ul class="dropdown-content">
+                            <li>
+                                <a href="#">программа курса</a>
+                            </li>
+                            <li>
+                                <a href="#">оплата курса</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <section class="main-screen container">
@@ -63,7 +65,7 @@
             <h1>DRAGON</h1>
         </div>
         <div class="bottom-block">
-            <a class="button" href="#">предварительная регистрация</a>
+            <a class="button" href="registration.html">предварительная регистрация</a>
         </div>
     </section>
     <section class="course-program container">
@@ -123,12 +125,113 @@
                 </a>
                 <p>В галерее мы собрали сочные снимки работ наших учеников</p>
             </div>
-            <div class="gallery">
-                <figure class="gallery-content">
-                    <img src="#" alt="Коктейль1" width="286" height="164">
-                </figure>
-                <button class="btn gallery-prev" type="button">Назад</button>
-                <button class="btn gallery-next" type="button">Вперёд</button>
+            <div class="lightbox">
+                <div class="row">
+                    <div class="column">
+                        <img src="/image/Cocktail_1.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column hide-for-mobile">
+                        <img src="/image/Cocktail_2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column hide-for-mobile">
+                        <img src="/image/Cocktail_3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column hide-for-mobile">
+                        <img src="/image/Cocktail_4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column hide-for-mobile">
+                        <img src="/image/Cocktail_5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column hide-for-mobile">
+                        <img src="/image/Cocktail_6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column hide-for-mobile">
+                        <img src="/image/Cocktail_7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+                    </div>
+                    <div class="column hide-for-mobile">
+                        <img src="/image/Cocktail_8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+                    </div>
+                </div>
+
+                <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 8</div>
+                            <img src="/image/Cocktail_1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 8</div>
+                            <img src="/image/Cocktail_2.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 8</div>
+                            <img src="/image/Cocktail_3.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 8</div>
+                            <img src="/image/Cocktail_4.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 8</div>
+                            <img src="/image/Cocktail_5.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">6 / 8</div>
+                            <img src="/image/Cocktail_6.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">7 / 8</div>
+                            <img src="/image/Cocktail_7.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">8 / 8</div>
+                            <img src="/image/Cocktail_8.jpg" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+
+                        <div class="column hide-for-mobile">
+                            <img class="demo cursor" src="/image/Cocktail_1.png" style="width:100%" onclick="currentSlide(1)" alt="">
+                        </div>
+                        <div class="column hide-for-mobile">
+                            <img class="demo cursor" src="/image/Cocktail_2.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+                        </div>
+                        <div class="column hide-for-mobile">
+                            <img class="demo cursor" src="/image/Cocktail_3.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+                        </div>
+                        <div class="column hide-for-mobile">
+                            <img class="demo cursor" src="/image/Cocktail_4.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+                        </div>
+                        <div class="column hide-for-mobile">
+                            <img class="demo cursor" src="/image/Cocktail_5.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+                        </div>
+                        <div class="column hide-for-mobile">
+                            <img class="demo cursor" src="/image/Cocktail_6.jpg" style="width:100%" onclick="currentSlide(6)" alt="">
+                        </div>
+                        <div class="column hide-for-mobile">
+                            <img class="demo cursor" src="/image/Cocktail_7.jpg" style="width:100%" onclick="currentSlide(7)" alt="">
+                        </div>
+                        <div class="column hide-for-mobile">
+                            <img class="demo cursor" src="/image/Cocktail_8.jpg" style="width:100%" onclick="currentSlide(8)" alt="">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -216,31 +319,19 @@
         </div>
         <div class="middle">
             <div class="logo-container">
-                <img src="#" alt="DRAGON">
+                <img src="/image/Dragon's_Eye.png" alt="DRAGON">
             </div>
             <div class="social">
                 <p>Мы в социальных сетях:</p>
                 <ul>
                     <li>
-                        <a href="#">
-                            <img src="" alt="">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <img src="" alt="">
-                        </a>
+                        <div class="facebook sprite"></div>
                     </li>
                     <li>
-                        <a href="#">
-                            <img src="" alt="">
-                        </a>
+                        <div class="instagram sprite"></div>
                     </li>
                     <li>
-                        <a href="#">
-                            <img src="" alt="">
-                        </a>
+                        <div class="twitter sprite"></div>
                     </li>
                 </ul>
             </div>
@@ -249,6 +340,7 @@
             <p>dragon.com.ua | 2015-2018</p>
         </div>
     </footer>
+    <script src="/js/lightbox.js"></script>
 </body>
 
 </html>
