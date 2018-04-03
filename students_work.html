@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dragon: профессиональная школа барменов</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <header class="top-panel container clearfix">
+        <div class="left-side">
+            <div class="index-logo">
+                <img src="/image/Dragon's_Eye.png" alt="DRAGON">
+            </div>
+            <div class="logo-information">
+                <h2>DRAGON</h2>
+                <p>Профессиональная школа
+                    <br> барменов</p>
+            </div>
+        </div>
+        <nav class="right-side mobile-dropdown">
+            <div class="mobile-dropbtn">
+                <ul class="menu mobile-dropdown-content">
+                    <li>
+                        <a href="index.html">Главная страница</a>
+                    </li>
+                    <li>
+                        <a href="about.html">Кто мы</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropbtn">О курсе</a>
+                        <ul class="dropdown-content">
+                            <li>
+                                <a href="teachers.html">преподаватели</a>
+                            </li>
+                            <li>
+                                <a href="students_work.html">работы студентов</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropbtn">Новый набор</a>
+                        <ul class="dropdown-content">
+                            <li>
+                                <a href="course_program.html">программа курса</a>
+                            </li>
+                            <li>
+                                <a href="payment.html">оплата курса</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="registration.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="students-works container">
+        <div class="students-works-top-block">
+            <h4>Работы студентов</h4>
+            <div class="divider"></div>
+            <p class="subheader">Галерея работ студентов</p>
+        </div>
+    </section>
+    <section class="container">
+        <div class="lightbox">
+            <div class="row">
+                <div class="column">
+                    <img src="/image/Cocktail_1.png" style="width:100%; margin-top:2rem" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="column" style="margin-top:2rem">
+                    <img src="/image/Cocktail_2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+                <div class="column hide-for-mobile">
+                    <img src="/image/Cocktail_3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                </div>
+                <div class="column hide-for-mobile">
+                    <img src="/image/Cocktail_4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                </div>
+                <div class="column hide-for-mobile">
+                    <img src="/image/Cocktail_5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                </div>
+                <div class="column hide-for-mobile">
+                    <img src="/image/Cocktail_6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+                </div>
+                <div class="column hide-for-mobile">
+                    <img src="/image/Cocktail_7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+                </div>
+                <div class="column hide-for-mobile">
+                    <img src="/image/Cocktail_8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+                </div>
+            </div>
+
+            <div id="myModal" class="modal" style="height: 127%;">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 8</div>
+                        <img src="/image/Cocktail_1.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 8</div>
+                        <img src="/image/Cocktail_2.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 8</div>
+                        <img src="/image/Cocktail_3.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 8</div>
+                        <img src="/image/Cocktail_4.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 8</div>
+                        <img src="/image/Cocktail_5.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 8</div>
+                        <img src="/image/Cocktail_6.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">7 / 8</div>
+                        <img src="/image/Cocktail_7.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">8 / 8</div>
+                        <img src="/image/Cocktail_8.jpg" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+
+
+                    <div class="column hide-for-mobile">
+                        <img class="demo cursor" src="/image/Cocktail_1.png" style="width:100%" onclick="currentSlide(1)" alt="">
+                    </div>
+                    <div class="column hide-for-mobile">
+                        <img class="demo cursor" src="/image/Cocktail_2.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+                    </div>
+                    <div class="column hide-for-mobile">
+                        <img class="demo cursor" src="/image/Cocktail_3.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+                    </div>
+                    <div class="column hide-for-mobile">
+                        <img class="demo cursor" src="/image/Cocktail_4.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+                    </div>
+                    <div class="column hide-for-mobile">
+                        <img class="demo cursor" src="/image/Cocktail_5.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+                    </div>
+                    <div class="column hide-for-mobile">
+                        <img class="demo cursor" src="/image/Cocktail_6.jpg" style="width:100%" onclick="currentSlide(6)" alt="">
+                    </div>
+                    <div class="column hide-for-mobile">
+                        <img class="demo cursor" src="/image/Cocktail_7.jpg" style="width:100%" onclick="currentSlide(7)" alt="">
+                    </div>
+                    <div class="column hide-for-mobile">
+                        <img class="demo cursor" src="/image/Cocktail_8.jpg" style="width:100%" onclick="currentSlide(8)" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="container footer">
+        <div class="top">
+            <p>
+                профессиональная школа барменов
+            </p>
+        </div>
+        <div class="middle">
+            <div class="logo-container">
+                <img src="/image/Dragon's_Eye.png" alt="DRAGON">
+            </div>
+            <div class="social">
+                <p>Мы в социальных сетях:</p>
+                <ul>
+                    <li>
+                        <div class="facebook sprite"></div>
+                    </li>
+                    <li>
+                        <div class="instagram sprite"></div>
+                    </li>
+                    <li>
+                        <div class="twitter sprite"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>dragon.com.ua | 2015-2018</p>
+        </div>
+    </footer>
+    <script src="/js/lightbox.js"></script>
+</body>
+
+</html>

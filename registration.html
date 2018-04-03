@@ -25,19 +25,19 @@
             <div class="mobile-dropbtn">
                 <ul class="menu mobile-dropdown-content">
                     <li>
-                        <a href="#">Кто мы</a>
+                        <a href="index.html">Главная страница</a>
+                    </li>
+                    <li>
+                        <a href="about.html">Кто мы</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropbtn">О курсе</a>
                         <ul class="dropdown-content">
                             <li>
-                                <a href="#">преподаватели</a>
+                                <a href="teachers.html">преподаватели</a>
                             </li>
                             <li>
-                                <a href="#">календарь занятий</a>
-                            </li>
-                            <li>
-                                <a href="#">работы выпускников</a>
+                                <a href="students_work.html">работы студентов</a>
                             </li>
                         </ul>
                     </li>
@@ -45,15 +45,15 @@
                         <a class="dropbtn">Новый набор</a>
                         <ul class="dropdown-content">
                             <li>
-                                <a href="#">программа курса</a>
+                                <a href="course_program.html">программа курса</a>
                             </li>
                             <li>
-                                <a href="#">оплата курса</a>
+                                <a href="payment.html">оплата курса</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Контакты</a>
+                        <a>Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -99,6 +99,23 @@
             </ul>
         </div>
         <div class="contact-form">
-
+            <div class="form-caption">
+                <h6>регистрация на курс</h6>
+            </div>
+            <div class="registration-form">
+                <form action="#" method="POST">
+                    <input type="text" name="student-name" id="name-field" value="Ваше имя*" required>
+                    <input type="email" name="email" id="email-field" value="Email-адрес*" required>
+                    <input type="tel" name="tel" value="Телефон*" required>
+                    <select name="course" id="course-field" required>
+                        <option>Направление</option>
+                        <option value="full">Полный курс</option>
+                        <option value="mixology">Миксология</option>
+                        <option value="flairing">Флейринг</option>
+                        <option value="barista">Бариста</option>
+                    </select>
+                    <input type="button" value="ОТПРАВИТЬ"></input>
+                </form>
+            </div>
         </div>
     </section>
