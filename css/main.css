@@ -24,10 +24,19 @@ body {
 a {
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 .top-panel {
-    height: 16vh !important;
+    height: 14vh !important;
+    z-index: 99999 !important;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    
+}
+
+h2 {
+    display: none;
 }
 
 .container {
@@ -37,7 +46,7 @@ a {
     margin-right: auto;
     padding-left: 4.5rem;
     padding-right: 4.5rem;
-    border: 3px solid purple;
+    border: 3px solid transparent;
 }
 
 .left-side {
@@ -46,14 +55,18 @@ a {
 }
 
 .index-logo {
-    width: 150px;
-     height: 106px;
-     display: inline-block;
+    width: 40%;
+    display: inline-block;
+ }
+
+  img {
+     width: 100%;
  }
 
  .logo-information {
-     width: 55%;
+     width: 50%;
      display: inline-block;
+     vertical-align: top;
  }
 
 .right-side {
@@ -63,6 +76,12 @@ a {
 
 .right-side li {
     list-style-type: none;
+}
+
+.right-side .menu, .logo-information p {
+    font-size: 0.87rem;
+    letter-spacing: 0.1em;
+    font-weight: 720;
 }
 
 .dropbtn {
@@ -94,13 +113,18 @@ a {
 }
 
 .main-screen {
-    height: 81vh !important;
+    height: 98vh !important;
+    background-image: url(/image/background_big.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+
 }
 
 .head-block {
     margin-top: 12em;
     margin-left: auto;
     margin-right: auto;
+    color: white;
 }
 
 .head-block p::before {
@@ -156,7 +180,7 @@ h3::before {
 }
 
 .row > .column {
-    padding: 0 8px;
+    padding: 8px 8px;
   }
   
   .row:after {
@@ -215,7 +239,7 @@ h3::before {
     display: none;
   }
   
-  .cursor {
+  .cursor, input:hover {
     cursor: pointer
   }
   
@@ -466,10 +490,6 @@ footer .middle {
     }
 
     .index-logo {
-        display: none;
-    }
-
-    h2 {
         display: none;
     }
 
@@ -795,10 +815,6 @@ footer .middle {
         border: none;
     }
 
-    input:hover {
-        cursor: pointer;
-    }
-
     input[type="text"], input[type="email"], input[type="tel"], .registration-form select {
         width: 100%;
         font-size: 0.9rem;
@@ -942,6 +958,14 @@ footer .middle {
     .price-overview {
         margin: 5.3rem auto;
     }
+
+    .modal {
+        height: 106%;
+    }
+
+    .partners {
+        display: none;
+    }
 } 
 
 
@@ -958,6 +982,10 @@ footer .middle {
 }
 
 @media screen and (min-width: 1440px) and (max-width: 1920px) {
+    img {
+    width: 100%;
+    }
+
     body {
         font-size: 0.95rem;
     }
@@ -965,4 +993,148 @@ footer .middle {
     .head-block h1 {
         font-size: 7.2rem;
     }
+
+    .top-panel{
+        position: absolute !important;
+        color: white;
+    } 
+
+    .right-side a {
+        color: white;
+    }
+
+    .menu li {
+        display: inline-block;
+        margin: 0 2rem;
+    }
+
+    
+
+    .head-block {
+        margin-top: 18rem;
+    }
+
+    .head-block p {
+        margin-bottom: 3rem;
+    }
+
+    table {
+        margin: 1rem;
+        width: 100%;
+    }
+
+    td {
+        padding: 1rem;
+    }
+
+    .box1 {
+        width: 170px;
+        height: 170px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .course_1 {
+        background-image: url(/image/img.m.pID2332.png);
+    }
+
+    .course_2 {
+        background-image: url(/image/alcohol-bottles-e1486965460413.jpg);
+    }
+
+    .course_3 {
+        background-image: url(/image/Молекулярная_миксология22.jpg);
+    }
+
+    .course_4 {
+        background-image: url(/image/063.jpg);
+    }
+
+    .course_5 {
+        background-image: url(/image/steaming-milk-barista.jpg);
+    }
+
+    .course_6 {
+        background-image: url(/image/3d8621546_7338696.jpg);
+    }
+
+    .modal-content {
+        width: 50%;
+    }
+
+    .partners {
+        background-color: #f2eeef;
+    }
+
+    .partners p {
+        font-size: 1.05rem;
+        letter-spacing: 0.175em;
+        color: #c6c6c6;
+        text-align: center;
+    }
+
+    .partner1 {
+        background-image: url(/image/jatone.png); 
+        margin: 0 auto;
+    }
+
+    .partner2 {
+        background-image: url(/image/login_logo.png); 
+        margin: 0 auto;
+    }
+
+    .partner3 {
+        background-image: url(/image/Staritsky+levitsky+vodka+logo.png); 
+        margin: 0 auto;
+    }
+
+    .partner4 {
+        background-image: url(/image/1083546.jpeg); 
+        margin: 0 auto;
+    }
+
+    .middle::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .logo-container {
+        float: left;
+    }
+
+    .middle .logo-container {
+        width: 15%;
+    }
+
+    .social {
+        float: right;
+    }
+
+    .social ul {
+        list-style-type: none;
+    }
+
 }
+
+@media screen and (min-width: 1921px) {
+    .top-panel{
+        color: white;
+    } 
+
+    .right-side a {
+        color: white;
+    }
+
+    .menu li {
+        display: inline-block;
+        margin: 0 2rem;
+    }
+
+    .head-block {
+        margin-top: 20rem;
+    }
+}
+
+
