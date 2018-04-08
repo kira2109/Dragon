@@ -1,9 +1,11 @@
 *, *::before, *::after {
-    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -191,7 +193,9 @@ h3::before {
   
   .column {
     float: left;
-    width: 25%;
+    width: 22%;
+    margin-right: 5px;
+    margin-top: 0;
   }
   
   /* The Modal (background) */
@@ -255,9 +259,12 @@ h3::before {
     color: white;
     font-weight: bold;
     font-size: 20px;
+    -webkit-transition: 0.6s ease;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
-    user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
     -webkit-user-select: none;
   }
   
@@ -308,11 +315,13 @@ h3::before {
   }
   
   img.hover-shadow {
+    -webkit-transition: 0.3s;
     transition: 0.3s
   }
   
   .hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
   }
 
 .slider {
@@ -418,10 +427,6 @@ h3::before {
     color: #afafaf;
 }
 
-.footer {
-    height: 50vh !important;
-}
-
 .top {
     padding: 0 4.5rem;
     margin-top: 3rem;
@@ -449,17 +454,23 @@ footer .middle {
     text-align: right;
 }
 
+.sprite {
+    width: 74px;
+    height: 74px;
+    margin: 0 auto;
+    background: url(/image/social_small.png);
+}
+
 .social p, .copyright p {
     font-size: 0.95rem;
     color: #5d5d5d;
     letter-spacing: 0.025em;
-    text-transform: initial;
-    
+    text-transform: initial; 
 }
 
 .copyright {
     border-top: 1px solid rgba(0,0,0,0.1);
-    padding: 1.5rem;
+    padding-top: 0;
 }
 
 
@@ -533,7 +544,6 @@ footer .middle {
         padding: 5px 10px;
         display: block;
         text-transform: initial;
-        
     }
 
     .mobile-dropdown-content a:hover {background-color: #f1f1f1}
@@ -660,13 +670,6 @@ footer .middle {
         padding: 0;
     }
 
-    .sprite {
-        width: 74px;
-        height: 74px;
-        margin: 0 auto;
-        background: url(/image/social_small.png);
-    }
-
     .social-panel div {
         display: inline-block;
         width: 74px;
@@ -689,27 +692,26 @@ footer .middle {
     .facebook {
         background-position: -116px -20px;
     }
-
+    
     .facebook:hover {
         background-position: -116px -100px;
     }
-
+    
     .instagram {
         background-position: -400px -20px;
     }
-
+    
     .instagram:hover {
         background-position: -400px -100px;
     }
-
+    
     .twitter {
         background-position: -21px -20px;
     }
-
+    
     .twitter:hover {
         background-position: -21px -100px;
     }
-
     .main-content {
         height: auto;
     }
@@ -966,6 +968,14 @@ footer .middle {
     .partners {
         display: none;
     }
+
+    .video {
+        display: none;
+    }
+
+    .row:nth-child(1), .row:nth-child(2) {
+        margin-top: 2rem;
+    }
 } 
 
 
@@ -981,7 +991,7 @@ footer .middle {
     }
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1920px) {
+@media screen and (min-width: 1440px) {
     img {
     width: 100%;
     }
@@ -1007,8 +1017,6 @@ footer .middle {
         display: inline-block;
         margin: 0 2rem;
     }
-
-    
 
     .head-block {
         margin-top: 18rem;
@@ -1063,8 +1071,14 @@ footer .middle {
         width: 50%;
     }
 
+    .footer {
+        height: auto;
+        padding: 0;
+    }
+
     .partners {
         background-color: #f2eeef;
+
     }
 
     .partners p {
@@ -1094,10 +1108,22 @@ footer .middle {
         margin: 0 auto;
     }
 
+    .top {
+        padding: 0 4rem;
+    }
+
     .middle::after {
         content: "";
         display: table;
         clear: both;
+    }
+
+    footer .middle {
+        padding: 4rem;
+    }
+
+    .middle {
+        margin: 6rem 0;
     }
 
     .logo-container {
@@ -1112,29 +1138,484 @@ footer .middle {
         float: right;
     }
 
+    .social p {
+        margin-bottom: 2.5rem;
+    }
+
     .social ul {
         list-style-type: none;
     }
 
-}
-
-@media screen and (min-width: 1921px) {
-    .top-panel{
-        color: white;
-    } 
-
-    .right-side a {
-        color: white;
-    }
-
-    .menu li {
+    .social-ikon {
         display: inline-block;
-        margin: 0 2rem;
+        margin-right: 2rem;
     }
 
-    .head-block {
-        margin-top: 20rem;
+    .facebook {
+        background-position: -116px -20px;
     }
+    
+    .facebook:hover {
+        background-position: -116px -100px;
+    }
+    
+    .instagram {
+        background-position: -400px -20px;
+    }
+    
+    .instagram:hover {
+        background-position: -400px -100px;
+    }
+    
+    .twitter {
+        background-position: -21px -20px;
+    }
+    
+    .twitter:hover {
+        background-position: -21px -100px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .dropdown-content {
+        width: 16vw;
+        text-align: left;
+        display: none;
+        position: absolute;
+        top: 3vh;
+        left: 0;
+        background-color: white;
+        z-index: 1;
+        padding: 5px 5px!important;
+        border: 1px solid rgba(0,0,0,0.04);
+        
+    }
+
+    .dropdown-content a {
+        color: black;
+        display: block;
+        text-transform: initial;
+        line-height: 1;
+        font-size: 0.87rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 10px 0px;
+    }
+
+    .dropdown-content a:hover {background-color: #f1f1f1}
+
+    .dropbtn:hover .dropdown-content {
+        display: block;
+    }
+
+    .white-top {
+        background-color: white;
+        color: black;
+    }
+
+    .black-color a {
+        color: black!important;
+    }
+
+    .about {
+        padding-left: 6rem; 
+        padding-right: 6rem;
+        height: 92vh;
+        background-image: url(/image/cocktail_bora_bora-1.png);
+        background-size: 45%;
+        background-position: 31vw;
+        background-repeat: no-repeat;
+    }
+
+    .about::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .about-head {
+        margin-top: 10rem;
+    }
+
+    .about-head h6 {
+        font-size: 3.6rem;
+        color: #252525;
+        letter-spacing: 0.025em;
+    
+    }
+
+    .about-information {
+        float: left;
+        width: 45%;
+    }
+
+    .features {
+        float: left;
+        width: 45%;
+        margin-left: 4rem;
+        text-align: right;
+    }
+
+    .features ul {
+        list-style-image: url(/image/Dragon_Eye_small.png);
+        list-style-position: inside;
+        
+    }
+
+    .features h6 {
+        font-size: 1.5rem;
+        margin: 0.4rem;
+    }
+
+    .features ul li {
+        font-size: 1.5rem;
+        letter-spacing: 0.025em;
+        color: black;
+        text-transform: initial;
+        text-align: right;
+        padding: 10px;
+       
+    }
+
+    .video div {
+        margin: 3rem 4.5rem;
+        text-transform: initial;
+        font-size: 1.5rem;
+        letter-spacing: 0.025em;
+        color: black;
+        text-align: left;
+    }
+
+    .registration-wraper {
+        margin-top: 10rem;
+    }
+
+    .registration-wraper::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .social-panel {
+        float: left;
+        border-right: 1px solid rgba(0,0,0,0.1);
+        width: 20%;
+    }
+
+    .contacts-wraper {
+        float: left;
+        width: 48%;
+    }
+
+    .contact-form {
+        float: right;
+        width: 30%;
+        margin-top: 0rem;
+        padding: 40px 35px;
+        background-color: #efefef;
+        height: auto;
+    }
+
+    .contacts-info, .tel-info-wraper {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .curator-info .avatar {
+        display: inline-block;
+        width: 120px;
+        height: 120px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        background-image: url(/image/110134-1.jpg);
+        background-position: -200px 2px;
+    }
+
+    .curator-info .info {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .curator-name, .teachers-top-block h4, .students-works-top-block h4, .course-program-top-block h4, .payment-top-block h4 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 520;
+        margin: 1rem auto;
+    }
+    
+    .curator-subname {
+        font-size: 1rem;
+        letter-spacing: 0.05em;
+        color: #c6c6c6;
+        margin: 0;
+        font-weight: 540;
+    }
+
+    .tel-info {
+        font-size: 1.6rem;
+        color: #191919;
+        letter-spacing: 0.08em;
+        list-style-type: none;
+    }
+
+    .contact-link {
+        margin-top: 4rem;
+        padding: 2rem;
+    }
+
+    .contact-link ul {
+        list-style-type: none;
+    }
+
+    .contact-link li {
+        display: inline-block;
+        padding: 10px;
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .skype {
+        background-image: url(/image/skype.png);
+    }
+
+    .telegram {
+        background-image: url(/image/telegram.png);
+        
+    }
+
+    .social-name, .social-value {
+        font-size: 1rem;
+        letter-spacing: 0.01rem;
+        text-transform: initial;
+        color: #191919;
+    }
+
+    .social-value {
+        font-weight: 600;
+    }
+
+    .social-panel div {
+        display: block;
+        width: 74px;
+        height: 74px;
+        background: url(/image/social_small.png);
+    }
+
+    .social-panel :nth-child(1) {
+        background-position: -116px -20px;
+        margin: 2rem auto;
+    }
+
+    .social-panel :nth-child(2) {
+        background-position: -400px -20px;
+        margin: 2rem auto;
+    }
+
+    .social-panel :nth-child(3) {
+        background-position: -21px -20px;
+        margin: 2rem auto;
+    }
+
+    .facebook {
+        background-position: -116px -20px;
+    }
+    
+    .facebook:hover {
+        background-position: -116px -100px;
+    }
+    
+    .instagram {
+        background-position: -400px -20px;
+    }
+    
+    .instagram:hover {
+        background-position: -400px -100px;
+    }
+    
+    .twitter {
+        background-position: -21px -20px;
+    }
+    
+    .twitter:hover {
+        background-position: -21px -100px;
+    }
+
+    .form-caption h6, .about-head h6 {
+        font-size: 2rem;
+        letter-spacing: 0.025em;
+    }
+
+    .features h6 {
+        font-size: 1.3rem;
+    }
+
+    .registration-form {
+        padding: 50px 40px;
+        text-align: left;
+        margin-bottom: 45px;
+        background-color: white;
+        position: relative;
+    }
+
+    input {
+        border: none;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], .registration-form select {
+        width: 100%;
+        font-size: 0.9rem;
+        background-color: #f7f7f7;
+        padding: 17px 25px;
+        color: #8f8f8f;
+        margin-bottom: 20px;
+    }
+
+    .registration-form select, input[type="button"] {
+        color: black;
+        margin-bottom: 40px;
+    }
+
+    input[type="button"] {
+        width: 100%;
+        height: 75px;
+        background-color: #ffed2a;
+        font-size: 0.9rem;
+        letter-spacing: 0.025em;
+        text-align: center;
+        vertical-align: middle;
+        position: absolute;
+        bottom: -80px;
+        left: 0;
+    }
+
+    .teachers-header, .students-works, .course-program-header, .payment-header {
+        height: 94vh!important;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        position: relative;
+        background-image: url(/image/apple-martini_small.png);
+        background-repeat: no-repeat;
+        background-size: 30%;
+        background-position: 56vw 12vh;
+    }
+
+    .teachers-top-block {
+        margin-top: 14rem;
+        text-align: center;
+        width: 50vw;
+    }
+
+    .divider {
+        background-color: #f45222;
+        height: 4px;
+        width: 80px;
+        display: inline-block;
+        margin: 34px 0;
+    }
+
+    .course-program-top-block .divider {
+        margin-bottom: 0;
+    }
+
+    .subheader {
+        font-size: 1.05rem;
+        font-weight: 550;
+        margin-top: 5rem;
+        margin-bottom: 6rem;
+        text-transform: initial;
+        letter-spacing: 0.02rem;
+    }
+
+    .students-works-top-block {
+        margin-top: 6rem;
+        margin-bottom: 11.1rem;
+    }
+
+    .course-program-top-block {
+       margin-top: 5rem;
+    }
+
+    .program-description {
+        height: auto;
+    }
+
+    .course-name, .price {
+        font-size: 1.5rem;
+        letter-spacing: 0.025em;
+        font-weight: bold;
+    }
+
+    .course-description {
+        padding: 20px;
+        margin: 20px;
+        border: 1px solid rgba(0,0,0,0.06);
+        text-align: left;
+    }
+
+    .payment-top-block {
+        margin-top: 5rem;
+    }
+
+    .payment-header .subheader {
+        margin-bottom: 11rem;
+    }
+
+    .price-info {
+        padding: 20px;
+        height: auto;
+    }
+
+    .course-name {
+        margin: 2rem;
+    }
+
+    .course-information {
+        text-align: center;
+        margin-bottom: 4rem;
+        
+    }
+
+    .price-overview {
+        margin: 5.3rem auto;
+    }
+
+    .teacher-photo {
+        margin-bottom: 8rem;
+    }
+
+    .students-works-top-block, .course-program-top-block, .payment-top-block {
+        margin-top: 14rem;
+        text-align: center;
+        width: 50vw;
+    }
+
+    .lightbox {
+        height: auto;
+        margin-top: 5rem;
+    }
+
+    .course-wraper, .price-overview {
+        display: inline-block;
+        width: 48%;
+        vertical-align: top;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding-bottom: 2rem;
+    }
+
 }
 
 
